@@ -20,3 +20,20 @@
        scale"0.1="" 0.01="" -1.73"="" rotation="-80.76241192825545 178.3142061272294 3.7826673634536947" 1.09="" 54.58116="" 2.44"="" scale="0.001 0.001 0.001">
      </a-entity>
 </a-scene>
+    
+ <body>
+    <!-- Component used to create a scene in A-FRAME -->
+    <!-- The "raycaster" and "cursor" components are for handling clicks -->
+    <a-scene cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
+        <!-- Empty script, used for scene loading -->
+        <script id="NA" type="text/html"></script>
+        <!-- Component used to manage the camera -->
+        <a-entity id="cur_camera" camera="active: true" position="0 1 0" look-controls animation__1="property: camera.far; to: 100; dur: 500; easing: linear; startEvents: start_trans" animation__2="property: camera.far; from: 100; to: 1000; dur: 500; easing: linear; startEvents: end_trans"></a-entity>
+        <!-- Initialization of the "scene" used, custom component -->
+        <a-entity id="MainScene" scene-init template="src: #NA"></a-entity>
+      </a-scene>
+  </body>
+
+  <!-- Loading the index in JavaScript -->
+  <script src="./index.js"></script>
+</html>
