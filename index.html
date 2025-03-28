@@ -1,4 +1,19 @@
-<html>
+<html>   <body>
+    <!-- Component used to create a scene in A-FRAME -->
+    <!-- The "raycaster" and "cursor" components are for handling clicks -->
+    <a-scene cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable">
+        <!-- Empty script, used for scene loading -->
+        <script id="NA" type="text/html"></script>
+        <!-- Component used to manage the camera -->
+        <a-entity id="cur_camera" camera="active: true" position="0 1 0" look-controls animation__1="property: camera.far; to: 100; dur: 500; easing: linear; startEvents: start_trans" animation__2="property: camera.far; from: 100; to: 1000; dur: 500; easing: linear; startEvents: end_trans"></a-entity>
+        <!-- Initialization of the "scene" used, custom component -->
+        <a-entity id="MainScene" scene-init template="src: #NA"></a-entity>
+      </a-scene>
+  </body>
+
+  <!-- Loading the index in JavaScript -->
+  <script src="./index.js"></script>
+    
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 <a-scene>
 <a-entity id="magasin" obj-model="obj: ./table/magasin.obj; mtl: ./table/magasin.mtl" position="-4.41574 -0.00048 -5.06616" scale="0.01 0.01 0.01"></a-entity> 
